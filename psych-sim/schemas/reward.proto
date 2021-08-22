@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+enum RewardType {
+    HUNGER = 0;
+    THIRST = 1;
+    PAIN = 2;
+    HEAT = 3;
+    COLD = 4;
+    SICKNESS = 5;
+    BOREDOM = 6;
+    ISOLATION = 7;
+    HUMILIATION = 8;
+    DISGUST = 9;
+    DISCOMFORT = 10;
+    FRIGHT = 11;
+
+    APPRECIATION = 12;
+    PHYSICAL_EXERCISE = 13;
+    MENTAL_EXERCISE = 14;
+    SEXUAL = 15;
+    LUXURY_FOOD = 16;
+    LUXURY_TRAVEL = 17;
+    LUXURY_FURNITURE = 18;
+    LUXURY_CAR = 19; 
+}

@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+message Coordinate {
+  float x = 1;
+  float y = 2;
+  float z = 3;
+}
+
+message Velocity {
+  message Direction {
+    float angle_x = 1;
+    float angle_y = 2;
+    float angle_z = 3;
+  }
+  float magnitude = 1;
+}
+
+message Thing {
+  Coordinate Size = 1;
+  Coordinate Location = 2;
+  float weight = 3;
+  float temperature = 4;
+  string color = 5;
+  Velocity velocity = 6;
+  enum Type {
+    PERSON = 0;
+    ANIMAL = 1;
+    INANIMATE = 2;
+  }
+}

@@ -1,0 +1,23 @@
+syntax = "proto3";
+import "psych-sim/schemas/thing.proto";
+
+enum Action {
+    MOVED = 0;
+    TALKED = 1;
+    HEATED = 2;
+    COOLED = 3;
+    SATISFIED = 4;
+    ANGERED = 5;
+    CRASHED_INTO = 6;
+    STOPPED = 7;
+    KICKED = 8;
+    PUSHED = 9;
+    HUGGED = 10;
+    YELLED_AT = 11;
+}
+
+message Interaction {
+    Thing from = 1;
+    Thing to = 2;
+    Action action = 3;
+}
