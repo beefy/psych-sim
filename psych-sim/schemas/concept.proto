@@ -1,8 +1,19 @@
 syntax = "proto3";
+import "psych-sim/schemas/thing.proto";
 import "psych-sim/schemas/memory.proto";
+import "psych-sim/schemas/reward.proto";
 
-message Concept {
-  string query = 1;
-  int32 page_number = 2;
-  int32 result_per_page = 3;
+message ThingSentiment {
+  Thing thing = 1;
+  float sentiment = 2;
+}
+
+message InteractionSentiment {
+  Interaction interaction = 1;
+  float sentiment = 2;
+}
+
+message RewardSentiment {
+  RewardType reward = 1;
+  float sentiment = 2;
 }
